@@ -1,17 +1,16 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
+import presetAttributify from '@unocss/preset-attributify'
+import presetWind from '@unocss/preset-wind'
 import vue from '@vitejs/plugin-vue'
-import { VitePWA } from 'vite-plugin-pwa'
-import eslintPlugin from 'vite-plugin-eslint'
-import StylelintPlugin from 'vite-plugin-stylelint'
+import { fileURLToPath, URL } from 'node:url'
 import postcssNested from 'postcss-nested'
 import postcssPresetEnv from 'postcss-preset-env'
+import Unocss from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Unocss from 'unocss/vite'
-import presetWind from '@unocss/preset-wind'
-import presetAttributify from '@unocss/preset-attributify'
+import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
+import StylelintPlugin from 'vite-plugin-stylelint'
 
 export default defineConfig({
   build: {
@@ -86,9 +85,6 @@ export default defineConfig({
     }),
     StylelintPlugin({
       fix: true,
-    }),
-    eslintPlugin({
-      include: ['src/**/*.vue', 'src/**/*.js'],
     }),
     Unocss({
       presets: [
