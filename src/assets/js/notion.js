@@ -23,7 +23,11 @@ export function NotionSetting(setting, bookListData, formData, GetMessage) {
     if (errData) return noCover
     if (!data?.items) return noCover
     let filterData = data.items.filter(x => x.volumeInfo?.imageLinks?.thumbnail)
-    return filterData?.[0].volumeInfo.imageLinks.thumbnail ?? noCover
+    if (filterData.length > 0) {
+      return filterData[0].volumeInfo.imageLinks.thumbnail
+    } else {
+      return noCover
+    }
   }
 
   async function update(token, database_id, title, bookList, highlight) {

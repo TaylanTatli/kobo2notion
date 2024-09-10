@@ -15,7 +15,7 @@ Retrieved from [Kobo Exporter: 匯出 Kobo 電子書的書籍清單與註記資�
 ## Install
 
 ```shell
-yarn install
+pnpm install
 ```
 
 ## Usage
@@ -24,13 +24,13 @@ yarn install
 
 Open development mode
 ```shell
-yarn dev
+pnpm dev
 ```
 #### Method 2:
 
 Install vercel
 ```shell
-yarn add global vercel
+pnpm add global vercel
 ```
 Open development mode
 ```shell
