@@ -50,7 +50,7 @@ if (props.selectAll) {
 <template>
   <div class="w-full">
     <div class="all">
-      <n-checkbox v-model:checked="data.selectAll">所有</n-checkbox>
+      <n-checkbox v-model:checked="data.selectAll">All</n-checkbox>
     </div>
     <div class="treeDetails">
       <NTree

@@ -43,7 +43,7 @@ export default defineConfig({
         description: 'Export Kobo Book List and Hightlight to Notion.',
         theme_color: '#0079d2',
         start_url: './index.html',
-        lang: 'zh-Hant-HK',
+        lang: 'en',
         dir: 'ltr',
         orientation: 'portrait',
         icons: [

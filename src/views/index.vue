@@ -25,7 +25,7 @@
     <footer class="footer">
       Created by
       <a href="https://github.com/mollykannn">Molly Kan</a>
-      / Retrieved from <a href="http://www.vixual.net/blog/archives/117">Kobo Exporter: 匯出 Kobo 電子書的書籍清單與註記資料 (劃線與筆記) | Vixual</a>
+      / Retrieved from <a href="http://www.vixual.net/blog/archives/117">Kobo Exporter: Export book lists and annotation data (underlines and notes) from Kobo e-books | Vixual</a>
       <br />
       Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
       <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
