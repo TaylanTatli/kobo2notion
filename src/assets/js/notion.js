@@ -22,12 +22,11 @@ export function NotionSetting(setting, bookListData, formData, GetMessage) {
     let [errData, data] = await GetData(`https://www.googleapis.com/books/v1/volumes?q=${encodeURI(title)}`)
     if (errData) return noCover
     if (!data?.items) return noCover
-    let filterData = data.items.filter(x => x.volumeInfo?.imageLinks?.thumbnail)
-    if (filterData.length > 0) {
-      return filterData[0].volumeInfo.imageLinks.thumbnail
-    } else {
-      return noCover
+    let filterData = data.items.filter(x => x.volumeInfo?.imageLinks?.thumbnail)  
+    if (filterData.length === 0) {
+      return noCover;
     }
+    return filterData[0].volumeInfo.imageLinks.thumbnail
   }
 
   async function update(token, database_id, title, bookList, highlight) {
